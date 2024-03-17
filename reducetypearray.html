@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     var arr = [10,20,30];
+     var result = arr.reduce(function(passedItem,item){
+        return passedItem + item;
+     },0);
+ 
+     document.writeln(result);
+     /* document.writeln(result.next().value + '<br>');
+     document.writeln(result.next().value + '<br>');
+     document.writeln(result.next().value + '<br>'); */
+   </script>
+       
+</body>
+</html>

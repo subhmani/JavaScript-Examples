@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var w = new WeakSet();
+        var object1 = {};
+        var object2 = {};
+
+        w.add(object1);
+        w.add(object2);
+
+        document.writeln("Before Delete"+"<br>");
+
+        document.writeln(w.has(object1)+"<br>");
+        document.writeln(w.has(object2)+"<br>");
+        
+        document.writeln("After Delete");
+        w.delete(object2);
+        document.writeln(w.has(object1)+"<br>");
+        document.writeln(w.has(object2)+"<br>");
+    </script>
+</body>
+</html>

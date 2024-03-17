@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d1 = new Date("10/02/1969");
+        var d2 = new Date();
+        var difference = d2.getTime()-d1.getTime();
+        var result = (difference/31536000000).toFixed(0);
+        document.writeln(result+ "years");
+    </script>
+</body>
+</html>

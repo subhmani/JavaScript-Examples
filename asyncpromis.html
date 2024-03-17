@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script type="text/javascript">
+       
+       function display(value){
+            document.getElementById("result").innerHTML = value;
+
+        }
+        async function myfunction(){
+            return "Helloworld";
+        }
+        /* let promise =  new promise(resolve, reject){
+            resolve(){"ok"};
+            reject(){"Error"}
+        }
+        promise.then(
+            function(value),
+            function(error)
+        ) */
+        myfunction().then(
+            function(value){display(value)},
+            function(error){display(value)}
+        );
+
+    </script>
+</body>
+</html>

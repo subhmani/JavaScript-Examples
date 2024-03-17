@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login</h3>
+    <form name="login_form" onsubmit="formSubmit()">
+        <h4>Username:</h4>
+        <input type="text" placeholder="Enter Your Id">
+
+        <h4>Password:</h4>
+        <input type="password" placeholder="Enter Your Password">
+        <br><br>
+        <input type="submit" value="login">
+        <input type="button" value="Sign Up" onclick="create()">
+    </form>
+    <script>
+        function formSubmit(){
+            alert("Login Successful");
+        }
+        function create(){
+            window.location = "signup.html";
+        }
+    </script>
+</body>
+</html>

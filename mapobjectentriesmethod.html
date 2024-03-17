@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var m = new Map();
+       m.set(1,"HTML");
+       m.set(2,"CSS");
+       m.set(3, "Java");
+      var iteration = m.entries();
+      for(let i=0;i<m.size;i++){
+        document.writeln(iteration.next().value);
+      }
+   </script>
+</body>
+</html>

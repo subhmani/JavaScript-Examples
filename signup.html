@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h4>Create your Account</h4>
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" placeholder="Enter Your Name" id="name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" placeholder="Enter Your Email" id="email"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" placeholder="Enter Your Password" id="password"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type="text" placeholder="Enter Your Confirm Password" id="Confirmpassword"></td>
+        </tr>
+        <tr>
+            
+            <td><input type="submit" value="Create" onclick="createAccount()"></td>
+        </tr>
+    </table>
+    <script>
+        function createAccount(){
+            var name= document.getElementById("name").value;
+            var email= document.getElementById("email").value;
+            var password= document.getElementById("password").value;
+            var Confirmpassword= document.getElementById("Confirmpassword").value;
+            
+
+            var letters = /^[A-Za-z]+$/;
+            var email_value = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (name=="" || email==""|| password=="" || Confirmpassword==""){
+                alert("Enter all Details");
+            }else if (!letters.test(name)){
+                alert("Name Is Incorrect");
+            }else if(!email_value.test(email)){
+                alert("Email is not valid");
+            }else if (password!=Confirmpassword){
+                alert("password is not match");
+            }else if (document.getElementById("password").value.length>12){
+                alert("Max length is 12");
+            }else if (document.getElementById("password").value.length<6){
+                alert("Minmum length is 8");
+            }else{
+
+                alert("Your account is created");
+                window.location="https://www.google.com"
+            }
+        }
+
+
+    </script>
+</body>
+</html>
